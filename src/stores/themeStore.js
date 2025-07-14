@@ -4,7 +4,6 @@ import { persist } from "zustand/middleware";
 const useThemeModeStore = create(
   persist(
     (set) => ({
-      direction: "ltr",
       mode: "light",
       setThemeMode: (newMode) => set(newMode),
     }),

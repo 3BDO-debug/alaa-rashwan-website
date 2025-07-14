@@ -23,7 +23,7 @@ import {
 import Iconify from "../Iconify";
 import SideDrawer from "./SideDrawer";
 import HeaderLink from "./HeaderLink";
-// import useLocales from "@/hooks/useLocales";
+import useLocales from "@/hooks/useLocales";
 
 // -----------------------------------------------------------------
 
@@ -32,7 +32,7 @@ function Header() {
 
   const { direction, mode, setThemeMode } = useThemeModeStore();
 
-  // const { translate, currentLang, onChangeLang } = useLocales();
+  const { translate, currentLang, onChangeLang } = useLocales();
 
   const router = useRouter();
   const isMd = useMediaQuery((theme) => theme.breakpoints.up("md"));
@@ -126,18 +126,17 @@ function Header() {
                   />
                 </IconButton>
                 <IconButton
-                // onClick={() =>
-                //   onChangeLang(currentLang.value === "en" ? "ar" : "en")
-                // }
+                  onClick={() =>
+                    onChangeLang(currentLang.value === "en" ? "ar" : "en")
+                  }
                 >
-                  {/* <Iconify
-                    icon="emojione-v1:flag-for-flag-saudi-arabia"
-                    {
+                  <Iconify
+                    icon={
                       currentLang.value === "ar"
                         ? "twemoji:flag-united-kingdom"
                         : "emojione-v1:flag-for-flag-saudi-arabia"
                     }
-                  /> */}
+                  />
                 </IconButton>
               </Box>
               <IconButton
