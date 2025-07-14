@@ -17,7 +17,9 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
+// iconify
 import Iconify from "../Iconify";
+// stores
 import useThemeModeStore from "@/stores/themeStore";
 
 function Footer() {
@@ -28,8 +30,9 @@ function Footer() {
   const isMdOrLarger = useMediaQuery(theme.breakpoints.up("md"));
 
   const LEGAL_FOOTER_LINKS = [
-    { title: "Terms & Conditions", href: "/terms-Conditions" },
-    { title: "Privacy & Policy", href: "/privacy-Policy" },
+    { title: "Terms & Conditions", href: "/terms-conditions" },
+    { title: "Privacy Policy", href: "/privacy-policy" },
+    { title: "Refund Policy", href: "/refund-policy" },
   ];
 
   return (
@@ -172,9 +175,32 @@ function Footer() {
         </Grid>
       </Box>
       <Divider sx={{ bgcolor: "#939598", mt: 10 }} />
-      <Typography variant="subtitle1" sx={{ mx: 5, py: 3, fontWeight: "bold" }}>
+      {/* <Typography variant="subtitle1" sx={{ mx: 5, py: 3, fontWeight: "bold" }}>
         @ 2025 Alaa Rashwan. All rights reserved
-      </Typography>
+      </Typography> */}
+      <Stack direction="row" alignItems="center" justifyContent="space-between">
+        <Typography
+          variant="subtitle1"
+          sx={{ mx: 5, py: 3, fontFamily: "inter-regular", fontWeight: "bold" }}
+        >
+          @ 2025 Alaa Rashwan. All rights reserved
+        </Typography>
+        <Typography
+          variant="subtitle1"
+          sx={{ mx: 5, py: 3, fontFamily: "inter-regular", fontWeight: "bold" }}
+        >
+          Developed With All Love By{" "}
+          <Link
+            href="https://basedontech.com"
+            underline="none"
+            sx={{ color: "primary.main", fontWeight: "bold" }}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Based On Tech
+          </Link>
+        </Typography>
+      </Stack>
     </Box>
   );
 }

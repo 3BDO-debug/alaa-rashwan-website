@@ -8,6 +8,8 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Alert from "@/components/Alert";
 
+import "../locales/i18n";
+
 const metadata = {
   title: "Coach Alaa Rashwan",
   description: "Alaa Rashwan | Powered By B.O.T",
