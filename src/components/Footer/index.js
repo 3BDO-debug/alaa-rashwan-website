@@ -133,7 +133,7 @@ function Footer() {
                 textAlign: { xs: "center", md: "inherit" },
               }}
             >
-              alaarashwan@info.com
+              alaashehata62@gmail.com
             </Typography>
             <Typography
               variant="subtitle1"
@@ -142,7 +142,16 @@ function Footer() {
                 textAlign: { xs: "center", md: "inherit" },
               }}
             >
-              112343443234
+              01067085508
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              sx={{
+                mt: 2,
+                textAlign: { xs: "center", md: "inherit" },
+              }}
+            >
+              محافظة الغربية
             </Typography>
           </Grid>
           <Grid item xs={12} md={3.5}>
