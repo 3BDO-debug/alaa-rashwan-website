@@ -8,9 +8,12 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import heroBanner from "@/assets/heroBanner.png";
+import useLocales from "@/hooks/useLocales";
 
-function HeroBanner() {
+function HeroBanner({ onScrollToPackages }) {
   const isMd = useMediaQuery((theme) => theme.breakpoints.up("md"));
+
+  const { translate } = useLocales();
 
   return (
     <Box
@@ -29,13 +32,10 @@ function HeroBanner() {
       <Container maxWidth="xl">
         <Box sx={{ width: "fit-content" }}>
           <Typography variant="h2" color="grey.0" fontWeight="bold">
-            REFRESH YOUR
+            {translate("pagesTranslations.homePageTranslations.hero.title1")}
           </Typography>
           <Typography variant="h2" color="grey.0" fontWeight="bold">
-            ROUTINE SHAPE
-          </Typography>
-          <Typography variant="h2" color="grey.0" fontWeight="bold">
-            YOUR FITNESS
+            {translate("pagesTranslations.homePageTranslations.hero.title2")}
           </Typography>
           <Box sx={{ display: "flex", justifyContent: "center" }}>
             <Button
@@ -44,8 +44,9 @@ function HeroBanner() {
               sx={{ mt: 2, borderRadius: 5, width: "60%" }}
               fullWidth
               size="large"
+              onClick={onScrollToPackages}
             >
-              Join now
+              {translate("pagesTranslations.homePageTranslations.hero.button")}
             </Button>
           </Box>
         </Box>

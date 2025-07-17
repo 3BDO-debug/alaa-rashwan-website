@@ -13,6 +13,7 @@ import {
 } from "@mui/material";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import useLocales from "@/hooks/useLocales";
 
 // Dummy reviews
 const reviews = [
@@ -44,6 +45,7 @@ const reviews = [
 ];
 
 function Reviews() {
+  const { translate } = useLocales();
   const settings = {
     dots: true,
     infinite: true,
@@ -66,7 +68,7 @@ function Reviews() {
     <Container maxWidth="xl" sx={{ mt: 10, p: 4 }}>
       <Box sx={{ display: "flex", justifyContent: "center", mb: 4 }}>
         <Typography variant="h2" color="grey.0">
-          Reviews
+          {translate("pagesTranslations.homePageTranslations.reviews.title")}
         </Typography>
       </Box>
       <Slider {...settings}>
@@ -88,7 +90,9 @@ function Reviews() {
                     }}
                   >
                     <Typography variant="body2" sx={{ color: "grey.0" }}>
-                      Verified
+                      {translate(
+                        "pagesTranslations.homePageTranslations.reviews.verified"
+                      )}
                     </Typography>
                   </Box>
                 </Stack>

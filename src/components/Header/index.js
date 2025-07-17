@@ -19,7 +19,8 @@ import {
   useMediaQuery,
 } from "@mui/material";
 // assets
-// import logo from "@/assets/logo.png";
+import logoWhite from "@/assets/logoWhite.png";
+import logoBlue from "@/assets/logoBlue.png";
 import Iconify from "../Iconify";
 import SideDrawer from "./SideDrawer";
 import HeaderLink from "./HeaderLink";
@@ -73,21 +74,11 @@ function Header() {
               cursor: "pointer",
             }}
           >
-            <Stack>
-              <Box
-                sx={{
-                  position: "relative",
-                  height: 35,
-                }}
-              >
-                <Image
-                  layout="fill"
-                  // src={logo}
-                  alt="Alaa Rashwan"
-                  objectFit="contain"
-                />
-              </Box>
-            </Stack>
+            <Image
+              src={mode === "dark" ? logoWhite : logoBlue}
+              alt="Alaa Rashwan"
+              width={80}
+            />
           </Box>
           {/* Header Links */}
           <Stack
@@ -139,7 +130,7 @@ function Header() {
                   />
                 </IconButton>
               </Box>
-              <IconButton
+              {/* <IconButton
                 sx={{
                   display: {
                     xs: "flex",
@@ -149,7 +140,7 @@ function Header() {
                 onClick={() => triggerSideDrawer(true)}
               >
                 <Iconify icon="jam:menu" sx={{ width: 30, height: 30 }} />
-              </IconButton>
+              </IconButton> */}
             </Stack>
           </Box>
         </Stack>

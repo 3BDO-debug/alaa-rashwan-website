@@ -11,8 +11,31 @@ import {
 } from "@mui/material";
 // components
 import Iconify from "./Iconify";
+// hooks
+import useLocales from "@/hooks/useLocales";
+// stores
+import useThemeModeStore from "@/stores/themeStore";
+import useSubscribePopupStore from "@/stores/subscibePopUpStore";
 
-function PackageCard({ title, items }) {
+function PackageCard({
+  value,
+  title,
+  items,
+  subtitle,
+  prices,
+  region,
+  duration,
+  yearFreeMonths,
+  threeMonthsOffer,
+}) {
+  const { translate } = useLocales();
+
+  const { mode } = useThemeModeStore();
+
+  const currencyKey = region === "EG" ? "egp" : "usd";
+
+  const { openPopup } = useSubscribePopupStore();
+
   return (
     <Box
       sx={{
@@ -21,17 +44,24 @@ function PackageCard({ title, items }) {
         borderRadius: 3,
         width: "100%",
         m: 1,
-        height:"fit-content"
+        height: "fit-content",
       }}
     >
       <Card sx={{ m: 1 }}>
         <CardContent>
           <Typography
             sx={{ mt: 2, textAlign: "center" }}
-            color="#161E69"
+            color={mode === "dark" ? "primary.main" : "#161E69"}
             variant="h3"
           >
             {title}
+          </Typography>
+          <Typography
+            sx={{ mt: 0.5, textAlign: "center" }}
+            color={mode === "dark" ? "primary.main" : "#161E69"}
+            variant="subtitle1"
+          >
+            {subtitle}
           </Typography>
           <Divider
             sx={{
@@ -67,11 +97,57 @@ function PackageCard({ title, items }) {
               my: 2,
             }}
           />
-          <Box sx={{ display: "flex", justifyContent: "center" }}>
-            <Button variant="contained" size="large" sx={{ borderRadius: 10 }}>
-              Subscribe now
+          <Stack
+            direction="row"
+            alignItems="center"
+            justifyContent="space-between"
+          >
+            <Stack>
+              <Typography variant="h3">
+                {prices?.[duration]?.[currencyKey]}{" "}
+                {region === "EG" ? "EGP" : "USD"}
+              </Typography>
+              {yearFreeMonths && duration === 12 && (
+                <Typography variant="subtitle1">
+                  {" "}
+                  + {yearFreeMonths}{" "}
+                  {translate(
+                    "pagesTranslations.homePageTranslations.packages.freeMonths"
+                  )}
+                </Typography>
+              )}
+              {threeMonthsOffer && duration === 3 && (
+                <Typography variant="subtitle1">
+                  {" "}
+                  + {threeMonthsOffer}{" "}
+                  {translate(
+                    "pagesTranslations.homePageTranslations.packages.freeMonths"
+                  )}
+                </Typography>
+              )}
+            </Stack>
+            <Button
+              variant="contained"
+              size="large"
+              sx={{ borderRadius: 10 }}
+              onClick={() => {
+                openPopup({
+                  isTriggered: true,
+                  data: {
+                    value,
+                    title,
+                    price: prices?.[duration]?.[currencyKey],
+                    region,
+                    duration,
+                  },
+                });
+              }}
+            >
+              {translate(
+                "pagesTranslations.homePageTranslations.packages.button"
+              )}
             </Button>
-          </Box>
+          </Stack>
         </CardContent>
       </Card>
     </Box>

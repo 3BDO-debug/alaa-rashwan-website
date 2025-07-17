@@ -4,9 +4,12 @@ import React from "react";
 import { Box, Container, Grid, Typography } from "@mui/material";
 // hooks
 import useLocales from "@/hooks/useLocales";
+import useThemeModeStore from "@/stores/themeStore";
 
 function page() {
   const { translate } = useLocales();
+
+  const { mode } = useThemeModeStore();
 
   return (
     <Box sx={{ background: "linear-gradient(to bottom, #036292, #293F56)" }}>
@@ -22,7 +25,13 @@ function page() {
               <Box
                 sx={{ border: 1, borderColor: "grey.0", p: 1, borderRadius: 3 }}
               >
-                <Box sx={{ bgcolor: "grey.0", borderRadius: 2, p: 1 }}>
+                <Box
+                  sx={{
+                    bgcolor: mode === "dark" ? "grey.800" : "grey.0",
+                    borderRadius: 2,
+                    p: 1,
+                  }}
+                >
                   <Typography variant="h4">
                     {translate(
                       "pagesTranslations.privacyPolicyPageTranslations.1.title"
@@ -40,7 +49,13 @@ function page() {
               <Box
                 sx={{ border: 1, borderColor: "grey.0", p: 1, borderRadius: 3 }}
               >
-                <Box sx={{ bgcolor: "grey.0", borderRadius: 2, p: 1 }}>
+                <Box
+                  sx={{
+                    bgcolor: mode === "dark" ? "grey.800" : "grey.0",
+                    borderRadius: 2,
+                    p: 1,
+                  }}
+                >
                   <Typography variant="h4">
                     {translate(
                       "pagesTranslations.privacyPolicyPageTranslations.2.title"
@@ -58,7 +73,13 @@ function page() {
               <Box
                 sx={{ border: 1, borderColor: "grey.0", p: 1, borderRadius: 3 }}
               >
-                <Box sx={{ bgcolor: "grey.0", borderRadius: 2, p: 1 }}>
+                <Box
+                  sx={{
+                    bgcolor: mode === "dark" ? "grey.800" : "grey.0",
+                    borderRadius: 2,
+                    p: 1,
+                  }}
+                >
                   <Typography variant="h4">
                     {translate(
                       "pagesTranslations.privacyPolicyPageTranslations.3.title"
@@ -76,7 +97,13 @@ function page() {
               <Box
                 sx={{ border: 1, borderColor: "grey.0", p: 1, borderRadius: 3 }}
               >
-                <Box sx={{ bgcolor: "grey.0", borderRadius: 2, p: 1 }}>
+                <Box
+                  sx={{
+                    bgcolor: mode === "dark" ? "grey.800" : "grey.0",
+                    borderRadius: 2,
+                    p: 1,
+                  }}
+                >
                   <Typography variant="h4">
                     {translate(
                       "pagesTranslations.privacyPolicyPageTranslations.4.title"
@@ -94,7 +121,13 @@ function page() {
               <Box
                 sx={{ border: 1, borderColor: "grey.0", p: 1, borderRadius: 3 }}
               >
-                <Box sx={{ bgcolor: "grey.0", borderRadius: 2, p: 1 }}>
+                <Box
+                  sx={{
+                    bgcolor: mode === "dark" ? "grey.800" : "grey.0",
+                    borderRadius: 2,
+                    p: 1,
+                  }}
+                >
                   <Typography variant="h4">
                     {translate(
                       "pagesTranslations.privacyPolicyPageTranslations.5.title"

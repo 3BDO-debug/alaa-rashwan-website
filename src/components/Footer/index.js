@@ -21,6 +21,7 @@ import {
 import Iconify from "../Iconify";
 // stores
 import useThemeModeStore from "@/stores/themeStore";
+import useLocales from "@/hooks/useLocales";
 
 function Footer() {
   const theme = useTheme();
@@ -29,10 +30,23 @@ function Footer() {
 
   const isMdOrLarger = useMediaQuery(theme.breakpoints.up("md"));
 
+  const { translate } = useLocales();
+
   const LEGAL_FOOTER_LINKS = [
-    { title: "Terms & Conditions", href: "/terms-conditions" },
-    { title: "Privacy Policy", href: "/privacy-policy" },
-    { title: "Refund Policy", href: "/refund-policy" },
+    {
+      title: translate("pagesTranslations.homePageTranslations.footer.terms"),
+      href: "/terms-conditions",
+    },
+    {
+      title: translate(
+        "pagesTranslations.homePageTranslations.footer.privacyPolicy"
+      ),
+      href: "/privacy-policy",
+    },
+    {
+      title: translate("pagesTranslations.homePageTranslations.footer.refund"),
+      href: "/refund-policy",
+    },
   ];
 
   return (
@@ -53,7 +67,7 @@ function Footer() {
               fontWeight: 300,
             }}
           >
-            Join Our Rediant Newsletter
+            {translate("pagesTranslations.homePageTranslations.footer.title1")}
           </Typography>
           <Typography
             variant="h1"
@@ -61,10 +75,12 @@ function Footer() {
               fontSize: 50,
             }}
           >
-            And Get exclusive Offers
+            {translate("pagesTranslations.homePageTranslations.footer.title2")}
           </Typography>
           <TextField
-            placeholder="Enter your email"
+            placeholder={translate(
+              "pagesTranslations.homePageTranslations.footer.field"
+            )}
             variant="outlined"
             sx={{
               width: { xs: "100%", md: "35%" },
@@ -80,7 +96,9 @@ function Footer() {
                 <InputAdornment position="end">
                   {isMdOrLarger ? (
                     <Button sx={{ borderRadius: 10 }} variant="contained">
-                      Subscribe
+                      {translate(
+                        "pagesTranslations.homePageTranslations.footer.button"
+                      )}
                     </Button>
                   ) : (
                     <IconButton>
@@ -95,12 +113,8 @@ function Footer() {
             }}
           />
         </Box>
-        <Grid
-          container
-          spacing={10}
-          sx={{ mt: 10, display: "flex", justifyContent: "center" }}
-        >
-          <Grid item xs={12} md={5}>
+        <Grid container spacing={10} sx={{ mt: 10 }}>
+          <Grid size={{ xs: 12, md: 8 }}>
             <Typography
               variant="h3"
               sx={{ textAlign: { xs: "center", md: "inherit" } }}
@@ -115,8 +129,9 @@ function Footer() {
                 textAlign: { xs: "center", md: "inherit" },
               }}
             >
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy nibh euis- mod tincidunt ut laoreet dolore magna ali-
+              {translate(
+                "pagesTranslations.homePageTranslations.hook.subtitle"
+              )}
             </Typography>
           </Grid>
           <Grid item xs={12} md={3.5}>

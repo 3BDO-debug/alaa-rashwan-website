@@ -7,23 +7,31 @@ import ServiceCard from "@/components/ServiceCard";
 import nutrition from "@/assets/nutrition.png";
 import workout from "@/assets/workout.png";
 import followUp from "@/assets/followUp.png";
+import useLocales from "@/hooks/useLocales";
 
 function Services() {
+  const { translate } = useLocales();
   const cardsContent = [
     {
-      title: "Nutrition Plan",
+      title: translate(
+        "pagesTranslations.homePageTranslations.services.nutrition"
+      ),
       image: nutrition,
       description:
         "A personalized nutrition plan tailored to your body type, goals, and lifestyle. Includes meal guidance, portion control, and flexible food choices to help you stay consistent and see real results.",
     },
     {
-      title: "Workout Plan",
+      title: translate(
+        "pagesTranslations.homePageTranslations.services.workout"
+      ),
       image: workout,
       description:
         "A custom-tailored workout plan designed to match your fitness level and goals. Whether you're aiming to build muscle, burn fat, or improve overall strength, this plan evolves with your progress to keep you challenged and motivated.",
     },
     {
-      title: "Follow Up",
+      title: translate(
+        "pagesTranslations.homePageTranslations.services.followUp"
+      ),
       image: followUp,
       description:
         "Stay on track with regular check-ins, progress tracking, and personalized adjustments to your plan based on your evolving needs and feedback.",
@@ -38,7 +46,7 @@ function Services() {
           sx={{ display: "flex", justifyContent: "center", pt: 15 }}
         >
           <Typography variant="h2" color="grey.0">
-            Services
+            {translate("pagesTranslations.homePageTranslations.services.title")}
           </Typography>
         </Grid>
         {cardsContent.map((card, idx) => (

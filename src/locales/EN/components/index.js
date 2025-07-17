@@ -1,1 +1,1 @@
-// export { default as headerTranslations } from "./headerTranslations";
+export { default as subscriptionPopUpTranslations } from "./subscriptionPopUpTranslations";

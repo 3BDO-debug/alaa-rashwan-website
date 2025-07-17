@@ -1,5 +1,5 @@
 // components
-import {} from "./components";
+import { subscriptionPopUpTranslations } from "./components";
 // pages
 import {
   homePageTranslations,
@@ -17,7 +17,7 @@ const ar = {
     privacyPolicyPageTranslations,
     refundPolicyPageTranslations,
   },
-  componentsTranslations: {},
+  componentsTranslations: { subscriptionPopUpTranslations },
 };
 
 export default ar;

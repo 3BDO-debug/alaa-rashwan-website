@@ -9,20 +9,26 @@ const MUIAlert = React.forwardRef(function MUIAlert(props, ref) {
 });
 
 function Alert() {
-  const { triggered, type, message, setAlert } = useAlertStore();
+  const { alert, triggerAlert } = useAlertStore();
 
   const handleClose = () => {
     setAlert({ triggered: false, type: "", message: "" });
   };
 
   return (
-    <Snackbar open={triggered} autoHideDuration={6000} onClose={handleClose}>
+    <Snackbar
+      open={alert.triggered}
+      autoHideDuration={6000}
+      onClose={() => triggerAlert({ triggered: false, type: "", message: "" })}
+    >
       <MUIAlert
-        onClose={handleClose}
-        severity={type}
+        onClose={() =>
+          triggerAlert({ triggered: false, type: "", message: "" })
+        }
+        severity={alert.type}
         sx={{ width: "100%", color: "white" }}
       >
-        {message}
+        {alert.message}
       </MUIAlert>
     </Snackbar>
   );

@@ -18,9 +18,12 @@ import alaaRashwan from "@/assets/alaaRashwan.png";
 import dummbel from "@/assets/dummbel.png";
 import TransformationsSlider from "@/components/TransformationsSlider";
 import ServiceCard from "@/components/ServiceCard";
+import useLocales from "@/hooks/useLocales";
 
 function AboutUs() {
   const isMd = useMediaQuery((theme) => theme.breakpoints.up("md"));
+
+  const { translate } = useLocales();
 
   return (
     <Box>
@@ -42,14 +45,18 @@ function AboutUs() {
           {/* Left Section */}
           <Grid size={{ xs: 12, md: 4 }}>
             <Stack direction="row" alignItems="center" spacing={2}>
-              <Box sx={{ width: 20, height: 260, bgcolor: "grey.0" }} />
+              <Box sx={{ width: 20, height: 400, bgcolor: "grey.0" }} />
               <Stack gap={2}>
                 <Box>
                   <Typography variant="h2" color="common.white">
-                    TRAIN WITH
+                    {translate(
+                      "pagesTranslations.homePageTranslations.hook.title1"
+                    )}
                   </Typography>
                   <Typography variant="h2" color="primary.main">
-                    THE BEST
+                    {translate(
+                      "pagesTranslations.homePageTranslations.hook.title2"
+                    )}
                   </Typography>
                 </Box>
                 <Typography
@@ -57,9 +64,9 @@ function AboutUs() {
                   color="grey.0"
                   sx={{ width: isMd ? "80%" : "100%" }}
                 >
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                  diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                  aliquam erat volutpat. Ut wisi enim
+                  {translate(
+                      "pagesTranslations.homePageTranslations.hook.subtitle"
+                    )}
                 </Typography>
               </Stack>
             </Stack>
