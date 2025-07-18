@@ -205,87 +205,93 @@ function Packages() {
     },
   ];
   return (
-    <Container maxWidth="xl">
-      <Stack alignItems="center" sx={{ py: 10 }}>
-        <Typography
-          variant="h1"
-          color="grey.0"
-          textAlign="center"
-          sx={{ fontWeight: 500 }}
-        >
-          {translate("pagesTranslations.homePageTranslations.packages.title1")}
-        </Typography>
-        <Typography variant="h1" color="grey.0" textAlign="center">
-          {translate("pagesTranslations.homePageTranslations.packages.title2")}
-        </Typography>
-      </Stack>
-      <Grid container>
-        <Grid size={12}>
-          <Box
-            display="grid"
-            gridTemplateColumns={isMobile ? "1fr 1fr" : "repeat(4, auto)"}
-            gap={1.5}
-            justifyContent="center"
-            alignItems="center"
-            width="100%"
-            sx={{ mb: 5 }}
+    <Box>
+      <Container maxWidth="xl">
+        <Stack alignItems="center" sx={{ py: 10 }}>
+          <Typography
+            variant="h1"
+            color="grey.0"
+            textAlign="center"
+            sx={{ fontWeight: 500 }}
           >
-            {durations.map(({ label, value }) => (
-              <ButtonBase
-                key={value}
-                onClick={() => setDuration(value)}
-                sx={{
-                  px: 2,
-                  py: 1.5,
-                  borderRadius: 2,
-                  textAlign: "center",
-                  fontSize: "1.2rem",
-                  fontWeight: "bold",
-                  color: "#ffffff",
-                  backgroundColor:
-                    duration === value ? "primary.main" : "transparent",
-                  "&:hover": {
-                    backgroundColor: "#ffffff20",
-                  },
-                }}
-              >
-                {label}
-              </ButtonBase>
-            ))}
-          </Box>
-        </Grid>
-        {packages
-          .filter((item) => {
-            // Hide plan3 and plan5 for duration 1 or 6
-            if (
-              (duration === 1 || duration === 6) &&
-              (item.value === "plan3" || item.value === "plan5")
-            ) {
-              return false;
-            }
-            return true;
-          })
-          .map((item, idx) => (
-            <Grid
-              key={idx}
-              size={{ xs: 12, md: 4 }}
-              sx={{ display: "flex", justifyContent: "center" }}
+            {translate(
+              "pagesTranslations.homePageTranslations.packages.title1"
+            )}
+          </Typography>
+          <Typography variant="h1" color="grey.0" textAlign="center">
+            {translate(
+              "pagesTranslations.homePageTranslations.packages.title2"
+            )}
+          </Typography>
+        </Stack>
+        <Grid container spacing={2}>
+          <Grid size={12}>
+            <Box
+              display="grid"
+              gridTemplateColumns={isMobile ? "1fr 1fr" : "repeat(4, auto)"}
+              gap={1.5}
+              justifyContent="center"
+              alignItems="center"
+              width="100%"
+              sx={{ mb: 5 }}
             >
-              <PackageCard
-                value={item.value}
-                title={item.title}
-                items={item.items}
-                subtitle={item.subtitle}
-                prices={item.prices}
-                yearFreeMonths={item.yearFreeMonths}
-                threeMonthsOffer={item.threeMonthsOffer}
-                region={userIpRegion}
-                duration={duration}
-              />
-            </Grid>
-          ))}
-      </Grid>
-    </Container>
+              {durations.map(({ label, value }) => (
+                <ButtonBase
+                  key={value}
+                  onClick={() => setDuration(value)}
+                  sx={{
+                    px: 2,
+                    py: 1.5,
+                    borderRadius: 2,
+                    textAlign: "center",
+                    fontSize: "1.2rem",
+                    fontWeight: "bold",
+                    color: "#ffffff",
+                    backgroundColor:
+                      duration === value ? "primary.main" : "transparent",
+                    "&:hover": {
+                      backgroundColor: "#ffffff20",
+                    },
+                  }}
+                >
+                  {label}
+                </ButtonBase>
+              ))}
+            </Box>
+          </Grid>
+          {packages
+            .filter((item) => {
+              // Hide plan3 and plan5 for duration 1 or 6
+              if (
+                (duration === 1 || duration === 6) &&
+                (item.value === "plan3" || item.value === "plan5")
+              ) {
+                return false;
+              }
+              return true;
+            })
+            .map((item, idx) => (
+              <Grid
+                key={idx}
+                size={{ xs: 12, md: 4 }}
+                sx={{ display: "flex", justifyContent: "center" }}
+              >
+                <PackageCard
+                  value={item.value}
+                  title={item.title}
+                  items={item.items}
+                  subtitle={item.subtitle}
+                  prices={item.prices}
+                  yearFreeMonths={item.yearFreeMonths}
+                  threeMonthsOffer={item.threeMonthsOffer}
+                  region={userIpRegion}
+                  duration={duration}
+                />
+              </Grid>
+            ))}
+        </Grid>
+      </Container>
+    </Box>
   );
 }
 

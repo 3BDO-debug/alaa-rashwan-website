@@ -62,7 +62,7 @@ const homePageTranslations = {
       5: "Ideal for high achievers",
     },
     plan6: {
-      title: "Charity Support Package ❤️",
+      title: "Charity Support Package",
       subtitle:
         "For people who truly want to change but have financial challenges",
       1: "Full access to meal & workout plans",

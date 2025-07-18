@@ -1,5 +1,7 @@
 "use client";
 import { useRef } from "react";
+// next
+import Image from "next/image";
 // @Mui
 import { Box, useMediaQuery } from "@mui/material";
 // framer-motion
@@ -12,6 +14,8 @@ import Transformations from "@/sections/homePage/Transformations";
 import Packages from "@/sections/homePage/Packages";
 import Reviews from "@/sections/homePage/Reviews";
 import SubscribeNowPopUp from "@/components/SubscribeNowPopUp";
+// assets
+import dummbel from "@/assets/dummbel.png";
 
 // ----------------------------------------------------------------
 
@@ -96,7 +100,21 @@ export default function Home() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.2 }}
+          style={{ position: "relative" }} // Ensure the parent has a position
         >
+          <Box
+            component={Image}
+            src={dummbel}
+            alt="Dumbbell Background"
+            sx={{
+              position: "absolute",
+              top: 150,
+              left: 0,
+              width: 1000,
+              height: "auto",
+              opacity: 0.2,
+            }}
+          />
           <Packages />
         </motion.div>
 

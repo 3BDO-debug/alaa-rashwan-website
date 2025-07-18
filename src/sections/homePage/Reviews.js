@@ -18,29 +18,39 @@ import useLocales from "@/hooks/useLocales";
 // Dummy reviews
 const reviews = [
   {
-    name: "John Doe",
+    name: "Salama",
     image: "",
-    description: "Amazing transformation program! Helped me stay on track.",
+    description:
+      "نسبة الدهون ٣٩.٩ والوزن ٧٦ كجم – نزول ٥ كيلو بفضل الله، ومعدل الحرق بدأ يتحسن 🌟",
   },
   {
-    name: "Jane Smith",
+    name: "Nehal",
     image: "",
-    description: "The workouts are effective and easy to follow. Loved it!",
+    description:
+      "هدومي اللي كانت ضيقة بقيت تلبس تاني – حسيت إن جسمي اتحسن وبقى صحي – أجمل إحساس ❤️",
   },
   {
-    name: "Ali Hassan",
+    name: "Hossam",
     image: "",
-    description: "Great nutrition advice and consistent follow-ups.",
+    description:
+      "الوزن وصل لـ 87 كجم في الاختبارات بعد ما كان 86.6 كجم من يومين، والطول 179 سم. الحمد لله، فيه تحسّن ملحوظ.",
   },
   {
-    name: "Sara Ahmed",
+    name: "Alaa",
     image: "",
-    description: "Very motivating trainer and excellent support system.",
+    description: "نزل الوزن من 86 كجم إلى 83.1 كجم – نزول حوالي 3 كجم 👏💖",
   },
   {
-    name: "Chris Lee",
+    name: "Zyad",
     image: "",
-    description: "I saw real results in just a few weeks!",
+    description:
+      "كابتن علاء من أحسن المدربين، اهتمام ومتابعة ورد على أي استفسار في أي وقت.",
+  },
+  {
+    name: "Abanoub",
+    image: "",
+    description:
+      "كوتش رشوان من أكتر الناس أمانة وإخلاص في شغله، بيتابع كويس جدًا وبيراعي ظروف الناس ماديًا ومعنويًا. إنسان محترم وخلوق، ربنا يوفقه دايمًا ❤️",
   },
 ];
 
@@ -74,7 +84,7 @@ function Reviews() {
       <Slider {...settings}>
         {reviews.map((review, index) => (
           <Box key={index} px={1}>
-            <Card sx={{ borderRadius: 5, boxShadow: 10, height: "100%" }}>
+            <Card sx={{ borderRadius: 5, boxShadow: 10, height: "25vh" }}>
               <CardContent>
                 <Rating value={5} readOnly />
                 <Stack direction="row" alignItems="center" gap={1} mt={2}>
