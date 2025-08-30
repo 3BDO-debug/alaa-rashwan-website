@@ -181,7 +181,7 @@ const translations = {
     "aboutUs.title1": "I'm",
     "aboutUs.title2": "Alaa Rashwan",
     "aboutUs.subtitle":
-      "Your dedicated fitness coach committed to helping everyday people achieve extraordinary transformations through proven methods and personalized guidance.",
+      "Your personal coach is here to help you achieve a remarkable change with clear steps and direct guidance.",
     "aboutUs.experience": "Years Experience",
     "aboutUs.changed": "Lives Changed",
 
@@ -314,7 +314,7 @@ const translations = {
     "info.email": "Email",
     "info.phone": "Phone",
     "info.response.title": "Response Time",
-    "info.response.subtitle": "Within 24 hours",
+    "info.response.subtitle": "Instant",
     "info.consultation.title": "Free Consultation Available",
     "info.consultation.subtitle":
       "Not sure which program is right for you? Schedule a free 15-minute consultation call to discuss your goals and find the perfect fit.",
@@ -508,7 +508,7 @@ const translations = {
     "aboutUs.title1": "أنا",
     "aboutUs.title2": "علاء رشوان",
     "aboutUs.subtitle":
-      "مدربك الشخصي المكرّس لمساعدتك على تحقيق تحول استثنائي بطرق مثبتة وتوجيه شخصي.",
+      "مدربك الشخصي هنا لمساعدتك على تحقيق تغيير مميز بخطوات واضحة وتوجيه مباشر.",
     "aboutUs.experience": "سنوات خبرة",
     "aboutUs.changed": "حياة تغيّرت",
 
@@ -640,7 +640,7 @@ const translations = {
     "info.email": "البريد الإلكتروني",
     "info.phone": "الهاتف",
     "info.response.title": "وقت الرد",
-    "info.response.subtitle": "خلال 24 ساعة",
+    "info.response.subtitle": "بمجرد ارسال",
     "info.consultation.title": "استشارة مجانية متاحة",
     "info.consultation.subtitle":
       "غير متأكد من البرنامج المناسب لك؟ احجز مكالمة مجانية مدتها 15 دقيقة لمناقشة أهدافك.",

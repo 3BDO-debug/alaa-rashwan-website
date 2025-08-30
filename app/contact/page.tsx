@@ -417,12 +417,12 @@ export default function ContactPage() {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-md transition-shadow">
+            {/* <Card className="hover:shadow-md transition-shadow">
               <CardContent className="p-6">
                 <h3 className="font-semibold text-lg mb-2">{t("qa.q4")}</h3>
                 <p className="text-muted-foreground">{t("qa.a4")}</p>
               </CardContent>
-            </Card>
+            </Card> */}
           </div>
         </div>
       </section>
