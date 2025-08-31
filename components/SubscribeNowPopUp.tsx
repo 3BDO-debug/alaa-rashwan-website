@@ -91,7 +91,7 @@ function SubscribeNowPopUp() {
 
   return (
     <Dialog open={isTriggred} onOpenChange={closePopup}>
-      <DialogOverlay className="bg-blue-500/30 backdrop-blur-sm fixed inset-0" />
+      {/* <DialogOverlay className="bg-blue-500/30 backdrop-blur-sm fixed inset-0" /> */}
 
       <DialogContent className="max-w-lg">
         <DialogHeader>
