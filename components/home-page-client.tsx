@@ -265,7 +265,28 @@ export function HomePageClient() {
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <ScrollReveal direction="left" delay={100}>
+            {/* Image first on mobile, right side on desktop */}
+            <ScrollReveal
+              direction="right"
+              delay={200}
+              className="order-1 lg:order-2"
+            >
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur-2xl"></div>
+                <img
+                  src="/assets/4.jpg"
+                  alt="Coach Alaa Rashwan"
+                  className="rounded-2xl shadow-lg w-full object-contain"
+                />
+              </div>
+            </ScrollReveal>
+
+            {/* Text second on mobile, left side on desktop */}
+            <ScrollReveal
+              direction="left"
+              delay={100}
+              className="order-2 lg:order-1"
+            >
               <div className="space-y-8">
                 <Badge className="bg-primary/20 text-primary border-primary/30 font-bold px-4 py-2 text-sm">
                   {t("hero.badge")}
@@ -327,17 +348,6 @@ export function HomePageClient() {
                     </div>
                   </div>
                 </div>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal direction="right" delay={200}>
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur-2xl"></div>
-                <img
-                  src="/assets/4.jpg"
-                  alt="Coach Alaa Rashwan"
-                  className="rounded-2xl shadow-lg h-200 w-150 object-contain"
-                />
               </div>
             </ScrollReveal>
           </div>
