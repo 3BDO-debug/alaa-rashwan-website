@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
+import { Facebook, Instagram, Youtube } from "lucide-react";
 import { useLanguage } from "@/hooks/use-language";
+import { FaWhatsapp, FaTiktok } from "react-icons/fa";
 
 export function Footer() {
   const { t } = useLanguage();
@@ -67,25 +68,31 @@ export function Footer() {
             <h3 className="font-semibold mb-4">{t("footer.followUs")}</h3>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.facebook.com/share/1D1jzJvk3z/?mibextid=wwXIfr"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 <Facebook size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/coach_alaa_rashwan?igsh=MTc1MnhwdWV6ZmttZA%3D%3D&utm_source=qr"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 <Instagram size={20} />
               </a>
               <a
-                href="#"
+                href="https://wa.me/message/SEW67QI5YTWBH1"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
-                <Twitter size={20} />
+                <FaWhatsapp size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.tiktok.com/@alaarashwan28?_t=ZS-8zQu19t9E2L&_r=1"
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
+                <FaTiktok size={18} />
+              </a>
+              <a
+                href="https://youtube.com/@rashwanfit?si=nPw2Z80v4QrLaYRw"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 <Youtube size={20} />
