@@ -197,22 +197,22 @@ export default function PricingPage() {
               </p>
             </div>
             <div className="flex items-center justify-center space-x-8">
-              <div className="text-center">
+              {/* <div className="text-center">
                 <div className="text-2xl font-bold text-primary">
                   {t("pricingPage.feature1.title")}
                 </div>
                 <div className="text-sm text-muted-foreground">
                   {t("pricingPage.feature1.subtitle")}
                 </div>
-              </div>
-              <div className="text-center">
+              </div> */}
+              {/* <div className="text-center">
                 <div className="text-2xl font-bold text-primary">
                   {t("pricingPage.feature2.title")}
                 </div>
                 <div className="text-sm text-muted-foreground">
                   {t("pricingPage.feature2.subtitle")}
                 </div>
-              </div>
+              </div> */}
               <div className="text-center">
                 <div className="text-2xl font-bold text-primary">
                   {t("pricingPage.feature3.title")}
@@ -322,13 +322,6 @@ export default function PricingPage() {
                 </Card>
               ))}
           </div>
-
-          {/* <div className="text-center mt-12 space-y-4">
-            <p className="text-muted-foreground">{t("pricingPage.hook")}</p>
-            <Button variant="outline" size="lg">
-              {t("pricingPage.hookCta")}
-            </Button>
-          </div> */}
         </div>
       </section>
 
@@ -471,9 +464,9 @@ export default function PricingPage() {
                 {t("transform.cta2")}
               </Button>
             </div>
-            <p className="text-sm text-muted-foreground">
+            {/* <p className="text-sm text-muted-foreground">
               {t("transform.footer")}
-            </p>
+            </p> */}
           </div>
         </div>
       </section>

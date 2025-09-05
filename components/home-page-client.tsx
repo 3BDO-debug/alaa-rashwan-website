@@ -39,12 +39,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
+import { FloatingPricingCTA } from "./floating-pricing-cta";
 
 export function HomePageClient() {
   const [userIpRegion, setUserIpRegion] = useState("");
 
   const fetchUserIpRegion = useCallback(async () => {
-    userIpRegionFetcher()
+    await userIpRegionFetcher()
       .then((response) => {
         setUserIpRegion(response.country);
       })
@@ -253,6 +254,8 @@ export function HomePageClient() {
   return (
     <div className="min-h-screen">
       <Navbar />
+
+      <FloatingPricingCTA userIpRegion={userIpRegion} />
 
       <section className="relative bg-gradient-to-br from-background via-primary/5 to-secondary/5 py-20 lg:py-32 overflow-hidden">
         {/* Background Elements */}
@@ -520,7 +523,7 @@ export function HomePageClient() {
 
       {/* Pricing Section */}
       <ScrollReveal direction="up" delay={100}>
-        <section className="py-20 bg-card/30">
+        <section id="pricing" className="py-20 bg-card/30">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center space-y-4 mb-12">
               <Badge className="bg-secondary/20 text-secondary border-secondary/30 font-bold">

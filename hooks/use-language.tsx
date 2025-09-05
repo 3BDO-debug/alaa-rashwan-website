@@ -26,6 +26,13 @@ const translations = {
     "nav.contact": "Contact Us",
     "nav.subscribe": "Subscribe Now",
 
+    // floating box
+    "floating.title": "Special Offer",
+    "floating.subtitle": "Eco Package 3-Months For",
+    "floating.offerEnds": "Offer ends in:",
+    "floating.goal": "Reach your goal & get a 🎁 gift!",
+    "floating.cta": "Claim offer",
+
     // Hero Section
     "hero.badge": "Transform Your Body",
     "hero.title": "Build Your Dream Physique",
@@ -360,6 +367,13 @@ const translations = {
     "nav.pricing": "الأسعار",
     "nav.contact": "تواصل معنا",
     "nav.subscribe": "اشترك الآن",
+
+    // floating box
+    "floating.title": "عرض خاص",
+    "floating.subtitle": "الباقة الاقتصادية لمدة 3 أشهر مقابل",
+    "floating.offerEnds": "ينتهي العرض خلال:",
+    "floating.goal": "حقق هدفك واحصل على 🎁 هدية!",
+    "floating.cta": "احجز العرض",
 
     // Hero Section
     "hero.badge": "حوّل جسمك",
