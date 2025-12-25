@@ -28,7 +28,7 @@ const translations = {
 
     // floating box
     "floating.title": "Special Offer",
-    "floating.subtitle": "Eco Package 3-Months For",
+    "floating.subtitle": "3-Months For",
     "floating.offerEnds": "Offer ends in:",
     "floating.goal": "Reach your goal & get a 🎁 gift!",
     "floating.cta": "Claim offer",
@@ -370,7 +370,7 @@ const translations = {
 
     // floating box
     "floating.title": "عرض خاص",
-    "floating.subtitle": "الباقة الاقتصادية لمدة 3 أشهر مقابل",
+    "floating.subtitle": "3 أشهر مقابل",
     "floating.offerEnds": "ينتهي العرض خلال:",
     "floating.goal": "حقق هدفك واحصل على 🎁 هدية!",
     "floating.cta": "احجز العرض",

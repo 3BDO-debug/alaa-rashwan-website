@@ -8,8 +8,8 @@ import { useLanguage } from "@/hooks/use-language";
 
 const NAVBAR_OFFSET = 80;
 
-// Fixed deadline: September 21, 2025, 12:00 AM Cairo time (UTC+3)
-const DEADLINE = new Date("2025-09-21T00:00:00+03:00").getTime();
+// Fixed deadline: January 1, 2026, 12:00 AM Cairo time (UTC+3)
+const DEADLINE = new Date("2026-01-01T00:00:00+03:00").getTime();
 
 export function FloatingPricingCTA({ userIpRegion }) {
   const [hidden, setHidden] = useState(false);
@@ -84,9 +84,7 @@ export function FloatingPricingCTA({ userIpRegion }) {
           </div>
           <div className="text-base font-bold">
             {t("floating.subtitle")}{" "}
-            <span className="text-green-600">
-              {userIpRegion === "EG" ? "600 EGP" : "12 USD"}
-            </span>
+            <span className="text-green-600">666 EGP</span>
           </div>
           <div className="text-xs text-muted-foreground">
             {t("floating.offerEnds")}
