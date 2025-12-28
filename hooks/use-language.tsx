@@ -19,7 +19,7 @@ interface LanguageContextType {
 
 const translations = {
   en: {
-    // Navigation
+    // Navigation //
     "nav.home": "Home",
     "nav.about": "About Us",
     "nav.pricing": "Pricing",
