@@ -39,7 +39,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
-import { FloatingPricingCTA } from "./floating-pricing-cta";
 
 export function HomePageClient() {
   const [userIpRegion, setUserIpRegion] = useState("");
@@ -255,7 +254,6 @@ export function HomePageClient() {
     <div className="min-h-screen">
       <Navbar />
 
-      <FloatingPricingCTA userIpRegion={userIpRegion} />
 
       <section className="relative bg-gradient-to-br from-background via-primary/5 to-secondary/5 py-20 lg:py-32 overflow-hidden">
         {/* Background Elements */}
